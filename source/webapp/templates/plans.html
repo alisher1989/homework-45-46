@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}plans{% endblock %}
+
+{% block menu %}
+    <li><a href="{% url 'plan_update' plan.pk %}">Edit</a></li>
+    <li><a href="{% url 'plan_delete' plan.pk %}">Delete</a></li>
+{% endblock %}
+
+{% block content %}
+        <p class="h1_plan"><h1><b>Plans name: </b>{{ plan.description }}</h1>
+        <p class="p_plan"><b>Plans status: {{ plan.status }}</b></p>
+        <div class="pre"><p class="p_plan"><b>Plans description: {{ plan.text }}</b></p></div>
+        <p class="p_plan"><b>Time: {{ plan.done_at }}</b></p>
+{% endblock %}

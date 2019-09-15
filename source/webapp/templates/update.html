@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Update Plan{% endblock %}
+
+{% block menu %}
+    <li><a href="{% url 'plan_view' plan.pk %}">View</a></li>
+{% endblock %}
+
+{% block content %}
+    <h1>Update Plan</h1>
+    <form class="form" method="POST" action="{% url 'plan_update' plan.pk %}">
+        {% include 'partial/plan_form.html' with button_text="Update" %}
+            <p><input type="submit" value="Update" id="input"></p>
+    </form>
+{% endblock %}

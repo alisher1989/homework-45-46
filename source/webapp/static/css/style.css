@@ -1,0 +1,94 @@
+body {
+    background: lightcyan;
+    color: #222222;
+    font-family: Arial, sans-serif;
+    margin-top: 60px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.link{
+    text-align: center;
+    color: black;
+}
+a {
+    color: #000;
+}
+
+.link{
+    text-align: center;
+}
+
+
+
+input, label, select, option, textarea{
+    margin-right: 0;
+    border-radius: 0.6em;
+}
+.detail {
+    height: 75px;
+}
+input:focus {
+    outline: none;
+    background-color: #ffa;
+    background-color: rgba(255,255,210,0.5);
+}
+.h1_plan {
+    text-align: center;
+}
+.p_plan {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+.navbar {
+    display: block;
+    background: #6a7dff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 0;
+    box-sizing: border-box;
+    padding: 7px 30px;
+}
+
+.menu {
+    font-size: 14px;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: #fffee8;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 15px;
+}
+
+.menu a:hover {
+    color: #ffc122;
+    text-decoration: underline;
+}
+.pre {
+    white-space: pre-wrap;
+}
+.form {
+    text-align: center;
+}

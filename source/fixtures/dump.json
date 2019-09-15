@@ -1,0 +1,160 @@
+[
+{
+  "model": "webapp.todolist",
+  "pk": 1,
+  "fields": {
+    "description": "Cinema",
+    "status": "new",
+    "text": null,
+    "done_at": "2019-09-06"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 2,
+  "fields": {
+    "description": "Project",
+    "status": "new",
+    "text": null,
+    "done_at": "2019-09-06"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 3,
+  "fields": {
+    "description": "bmw",
+    "status": "new",
+    "text": null,
+    "done_at": "2019-08-30"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 4,
+  "fields": {
+    "description": "Reading Book",
+    "status": "in_progress",
+    "text": null,
+    "done_at": "2019-09-09"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 5,
+  "fields": {
+    "description": "Cinema",
+    "status": "done",
+    "text": null,
+    "done_at": "2019-09-05"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 6,
+  "fields": {
+    "description": "Football match",
+    "status": "new",
+    "text": null,
+    "done_at": "2019-09-15"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 7,
+  "fields": {
+    "description": "Football match",
+    "status": "done",
+    "text": null,
+    "done_at": "2019-09-15"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 8,
+  "fields": {
+    "description": "Football match",
+    "status": "done",
+    "text": null,
+    "done_at": "2019-09-15"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 9,
+  "fields": {
+    "description": "Football match",
+    "status": "done",
+    "text": null,
+    "done_at": "2019-09-15"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 10,
+  "fields": {
+    "description": "Football match",
+    "status": "done",
+    "text": "",
+    "done_at": "2019-09-15"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 11,
+  "fields": {
+    "description": "Football match",
+    "status": "done",
+    "text": ";dlifhsakjhdgsaklgkjsd",
+    "done_at": "2019-09-15"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 12,
+  "fields": {
+    "description": "Football match",
+    "status": "new",
+    "text": "Arsenal will play with Watford at Wicarage road",
+    "done_at": "2019-09-15"
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 13,
+  "fields": {
+    "description": "Doing Homework",
+    "status": "new",
+    "text": "I've gotta do my homeworks with consentrations and be attention for that",
+    "done_at": null
+  }
+},
+{
+  "model": "webapp.todolist",
+  "pk": 14,
+  "fields": {
+    "description": "park",
+    "status": "new",
+    "text": "Aslkj lasdj a salkdjasldjadljsaldkjasdlasjdkaljdakj lkjd lasjdaldj lsdjlaskdj",
+    "done_at": "2019-09-20"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$pZuqPrQ5n3hs$CiPtoHP0WuA0XmjG85qDMH2VgedbmhQ2O3t6aT0Q5x4=",
+    "last_login": "2019-09-10T08:38:53.812Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2019-09-06T07:07:54.540Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
