@@ -41,18 +41,27 @@ def plan_create_view(request, *args, **kwargs):
 def plan_update_view(request, pk):
     plan = get_object_or_404(ToDoList, pk=pk)
     if request.method == 'GET':
+        form = PlanForm()
         return render(request, 'update.html', context={
-            'status_choices': STATUS_CHOICES
+            'status_choices': STATUS_CHOICES,
+            'form': form
         })
     elif request.method == 'POST':
-        plan.description = request.POST.get('description')
-        plan.status = request.POST.get('status')
-        plan.date = request.POST.get('time')
-        plan.text = request.POST.get('text')
-        if plan.date == '':
+        form = PlanForm(data=request.POST)
+        if form.is_valid():
+            plan.description = request.POST.get('description')
+            plan.status = request.POST.get('status')
+            plan.date = request.POST.get('time')
+            plan.text = request.POST.get('text')
+        elif plan.date == '':
             plan.date = None
-        plan.save()
-        return redirect('plan_view', pk=plan.pk)
+            plan.save()
+            return redirect('plan_view', pk=plan.pk)
+        else:
+            return render(request, 'create.html', context={
+                'status_choices': STATUS_CHOICES,
+                'form': form
+            })
 
 
 def plan_delete_view(request, pk):
