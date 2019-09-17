@@ -26,7 +26,9 @@ a {
 .link{
     text-align: center;
 }
-
+textarea {
+    text-align: center;
+}
 
 
 input, label, select, option, textarea{

@@ -1,11 +1,5 @@
 {% csrf_token %}
-<p><label>{{ form.description.label }}</label> <select name="status">
-    {% for choice in status_choices %}
-        <option value="{{ choice.0 }}">{{ choice.1 }}</option>
-    {% endfor %}
-</select></p>
-<p><label>Description</label> <input type="text" name="description" value="{{ plan.description }}"></p>
-<p><label class="desc_detail">Detailed description</label> <textarea class="detail" type="text" name="text">{{ plan.text }}</textarea></p>
-<p><label>Time</label> <input type="date" name="time"></p>
-<p><input type="submit" value="{{ button_text }}"></p>
-{#{{ form.as_p }}#}
+{{ form.as_p }}
+
+
+

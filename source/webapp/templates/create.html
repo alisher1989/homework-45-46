@@ -6,5 +6,6 @@
     <h1>Create Plan</h1>
     <form class="form" method="POST" action="{% url 'create_view' %}">
         {% include 'partial/plan_form.html' with button_text="Create"  %}
+        <p><input type="submit" value="Confirm" id="input"></p>
     </form>
 {% endblock %}

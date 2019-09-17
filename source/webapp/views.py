@@ -16,6 +16,7 @@ def plans_view(request, pk):
         'plan': plan
     })
 
+
 def plan_create_view(request, *args, **kwargs):
     if request.method == 'GET':
         form = PlanForm()
@@ -25,42 +26,43 @@ def plan_create_view(request, *args, **kwargs):
         })
     elif request.method == 'POST':
         form = PlanForm(data=request.POST)
-        date = request.POST.get('time')
-        if date == '':
-            date = None
         if not form.is_valid():
             return render(request, 'create.html', context={'form': form})
 
         plan = ToDoList.objects.create(
             description=form.cleaned_data['description'],
             status=form.cleaned_data['status'],
-            text=form.cleaned_data['text'])
+            text=form.cleaned_data['text'],
+            done_at=form.cleaned_data['done_at'])
         return redirect('plan_view', pk=plan.pk)
 
 
 def plan_update_view(request, pk):
     plan = get_object_or_404(ToDoList, pk=pk)
     if request.method == 'GET':
-        form = PlanForm()
+        form = PlanForm(data={
+            'description': plan.description,
+            'text': plan.text,
+            'status': plan.status,
+            'done_at': plan.done_at
+        })
         return render(request, 'update.html', context={
-            'status_choices': STATUS_CHOICES,
+            'plan': plan,
             'form': form
         })
     elif request.method == 'POST':
         form = PlanForm(data=request.POST)
         if form.is_valid():
-            plan.description = request.POST.get('description')
-            plan.status = request.POST.get('status')
-            plan.date = request.POST.get('time')
-            plan.text = request.POST.get('text')
-        elif plan.date == '':
-            plan.date = None
+            plan.description = form.cleaned_data['description']
+            plan.status = form.cleaned_data['status']
+            plan.done_at = form.cleaned_data['done_at']
+            plan.text = form.cleaned_data['text']
             plan.save()
             return redirect('plan_view', pk=plan.pk)
         else:
             return render(request, 'create.html', context={
-                'status_choices': STATUS_CHOICES,
-                'form': form
+                'form': form,
+                'plan': plan
             })
 
 

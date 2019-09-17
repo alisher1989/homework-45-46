@@ -9,7 +9,15 @@
 {% block content %}
     <h1>Update Plan</h1>
     <form class="form" method="POST" action="{% url 'plan_update' plan.pk %}">
+    <p><label>Status</label>
+{#        <select name="Status">#}
+{#            {% for choice in status_choices %}#}
+{#                <option value="{{ choice.0 }}">{{ choice.1 }}</option>#}
+{#            {% endfor %}#}
+{#        </select>#}
+{#    </p>#}
         {% include 'partial/plan_form.html' with button_text="Update" %}
             <p><input type="submit" value="Update" id="input"></p>
     </form>
 {% endblock %}
+
